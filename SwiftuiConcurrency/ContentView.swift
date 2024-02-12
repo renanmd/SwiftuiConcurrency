@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = SwiftuiConcurrencyViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            if let data = viewModel.data {
+                Text(data.title)
+            } else if viewModel.isLoading {
+                ProgressView()
+            } else {
+                Button("Fetch Data") {
+                    Task {
+                        await viewModel.fetchData()
+                    }
+                }
+            }
         }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

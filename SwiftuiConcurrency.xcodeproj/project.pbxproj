@@ -11,9 +11,11 @@
 		32BF60CE2B7ABD2100D356C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60CD2B7ABD2100D356C7 /* ContentView.swift */; };
 		32BF60D02B7ABD2400D356C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BF60CF2B7ABD2400D356C7 /* Assets.xcassets */; };
 		32BF60D32B7ABD2400D356C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BF60D22B7ABD2400D356C7 /* Preview Assets.xcassets */; };
-		32BF60DD2B7ABD2500D356C7 /* SwiftuiConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60DC2B7ABD2500D356C7 /* SwiftuiConcurrencyTests.swift */; };
 		32BF60E72B7ABD2500D356C7 /* SwiftuiConcurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60E62B7ABD2500D356C7 /* SwiftuiConcurrencyUITests.swift */; };
 		32BF60E92B7ABD2500D356C7 /* SwiftuiConcurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60E82B7ABD2500D356C7 /* SwiftuiConcurrencyUITestsLaunchTests.swift */; };
+		32BF60F62B7ABDE000D356C7 /* SwiftuiConcurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60F52B7ABDE000D356C7 /* SwiftuiConcurrencyViewModel.swift */; };
+		32BF60F82B7ABE3F00D356C7 /* SwiftuiConcurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60F72B7ABE3F00D356C7 /* SwiftuiConcurrencyModel.swift */; };
+		32BF60FC2B7AC87500D356C7 /* SwiftuiConcurrencyViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF60FB2B7AC87500D356C7 /* SwiftuiConcurrencyViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +42,12 @@
 		32BF60CF2B7ABD2400D356C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32BF60D22B7ABD2400D356C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32BF60D82B7ABD2500D356C7 /* SwiftuiConcurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftuiConcurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32BF60DC2B7ABD2500D356C7 /* SwiftuiConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiConcurrencyTests.swift; sourceTree = "<group>"; };
 		32BF60E22B7ABD2500D356C7 /* SwiftuiConcurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftuiConcurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BF60E62B7ABD2500D356C7 /* SwiftuiConcurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiConcurrencyUITests.swift; sourceTree = "<group>"; };
 		32BF60E82B7ABD2500D356C7 /* SwiftuiConcurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiConcurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32BF60F52B7ABDE000D356C7 /* SwiftuiConcurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiConcurrencyViewModel.swift; sourceTree = "<group>"; };
+		32BF60F72B7ABE3F00D356C7 /* SwiftuiConcurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiConcurrencyModel.swift; sourceTree = "<group>"; };
+		32BF60FB2B7AC87500D356C7 /* SwiftuiConcurrencyViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiConcurrencyViewModelSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				32BF60CB2B7ABD2100D356C7 /* SwiftuiConcurrencyApp.swift */,
 				32BF60CD2B7ABD2100D356C7 /* ContentView.swift */,
+				32BF60F52B7ABDE000D356C7 /* SwiftuiConcurrencyViewModel.swift */,
+				32BF60F72B7ABE3F00D356C7 /* SwiftuiConcurrencyModel.swift */,
 				32BF60CF2B7ABD2400D356C7 /* Assets.xcassets */,
 				32BF60D12B7ABD2400D356C7 /* Preview Content */,
 			);
@@ -113,7 +119,7 @@
 		32BF60DB2B7ABD2500D356C7 /* SwiftuiConcurrencyTests */ = {
 			isa = PBXGroup;
 			children = (
-				32BF60DC2B7ABD2500D356C7 /* SwiftuiConcurrencyTests.swift */,
+				32BF60FB2B7AC87500D356C7 /* SwiftuiConcurrencyViewModelSpec.swift */,
 			);
 			path = SwiftuiConcurrencyTests;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			files = (
 				32BF60CE2B7ABD2100D356C7 /* ContentView.swift in Sources */,
 				32BF60CC2B7ABD2100D356C7 /* SwiftuiConcurrencyApp.swift in Sources */,
+				32BF60F62B7ABDE000D356C7 /* SwiftuiConcurrencyViewModel.swift in Sources */,
+				32BF60F82B7ABE3F00D356C7 /* SwiftuiConcurrencyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32BF60DD2B7ABD2500D356C7 /* SwiftuiConcurrencyTests.swift in Sources */,
+				32BF60FC2B7AC87500D356C7 /* SwiftuiConcurrencyViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

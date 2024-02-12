@@ -8,25 +8,19 @@
 import XCTest
 
 final class SwiftuiConcurrencyUITestsLaunchTests: XCTestCase {
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
-
+    
     override func setUpWithError() throws {
         continueAfterFailure = false
-    }
-
-    func testLaunch() throws {
         let app = XCUIApplication()
+        app.launchArguments = ["-UITesting"]
         app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
+    }
+    
+    func testAppLaunchInitialState() {
+        let app = XCUIApplication()
+        
+        // Check for the "Fetch Data" button's existence.
+        let fetchDataButton = app.buttons["Fetch Data"]
+        XCTAssertTrue(fetchDataButton.exists, "The 'Fetch Data' button should be visible upon launch")
     }
 }
